@@ -12,21 +12,21 @@ while True:
         if int(choice) not in RANGE:
             print('Error!')
             time.sleep(2)
-            print('Your choice is', choice + ', and this is wrong.')
+            print('Your choice is %s, and this is wrong.' % (choice))
         else:
             rand_number = random.randint(1, 6)
-            print('Your choice is', choice,'. \nGood luck!')
+            print('Your choice is %s. \nGood luck!' % (choice))
             for i in range(1, 11):
-                sys.stdout.write("\r{}".format(i))
+                sys.stdout.write("\r%s" % (i))
                 sys.stdout.flush()
                 time.sleep(0.5)
             if rand_number == int(choice):
-                print('\nThe dice number is', rand_number, ', and your choice is', choice, '.')
+                print('\nThe dice number is %s, and your choice is %s.' % (rand_number, choice))
                 time.sleep(1)
                 print('Congratulations!!!!')
                 time.sleep(1)
             else:
-                print('\nThe dice number is', rand_number, ', and your choice is', choice, '.')
+                print('\nThe dice number is %s, and your choice is %s.' % (rand_number, choice))
                 time.sleep(1)
                 print('Try again =/')
                 time.sleep(1)

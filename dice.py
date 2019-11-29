@@ -1,6 +1,8 @@
 import random, sys, time
 
 RANGE = [1, 2, 3, 4, 5, 6]
+WIN = []
+LOSE = []
 print('Roling dice simulator.')
 time.sleep(0.9)
 print('Type "ctrl+c" for exit.')
@@ -25,11 +27,13 @@ while True:
                 time.sleep(1)
                 print('Congratulations!!!!')
                 time.sleep(1)
+                WIN.append([rand_number, int(choice)])
             else:
                 print(f'\nThe dice number is {rand_number}, and your choice is {choice}.')
                 time.sleep(1)
                 print('Try again =/')
                 time.sleep(1)
+                LOSE.append([rand_number, int(choice)])
     except KeyboardInterrupt:
         exit()
     except Exception:
